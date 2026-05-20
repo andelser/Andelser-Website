@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andelser | Independent Engineering & Design Lab</title>
+  <meta name="description" content="Andelser is an independent engineering and design lab building high-value, honest digital and physical projects. Creators of Sonderwave.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="./andelser_logo.svg">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.andelser.com/">
+  <meta property="og:title" content="Andelser | Independent Engineering & Design Lab">
+  <meta property="og:description" content="An independent project studio building thoughtful digital and physical experiences without the noise. Creators of Sonderwave.">
+  <meta property="og:image" content="./sw_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.andelser.com/">
+  <meta property="twitter:title" content="Andelser | Independent Engineering & Design Lab">
+  <meta property="twitter:description" content="An independent project studio building thoughtful digital and physical experiences without the noise. Creators of Sonderwave.">
+  <meta property="twitter:image" content="./sw_logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="glow-bg" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="navbar">
+    <div class="header-container">
+      <a href="#hero" class="brand" aria-label="Andelser Home">
+        <!-- Bespoke geometric "Branching Datum" A monogram logo -->
+        <svg class="brand-logo" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="6" x2="8" y2="33" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="20" y1="6" x2="27.5" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="32" y2="33" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="37" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="38" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="35" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="12.5" y1="23" x2="27.5" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span class="brand-name">Andelser</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Our Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link btn-contact-nav">Contact</a>
+      </nav>
+
+      <!-- Mobile Nav Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="nav-mobile" aria-label="Mobile Navigation">
+      <a href="#work" class="mobile-nav-link">Our Work</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <main class="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="reveal-content">
+          <span class="hero-badge">Independent Lab</span>
+          <h1 class="hero-title">
+            We design digital and physical tools to be useful and honest.
+          </h1>
+          <p class="hero-subtitle">
+            Andelser is an independent lab. We don't have a grand corporate mission or venture backing. We just want to engineer clean, thoughtful projects that respect your attention and help communities connect. We aren't perfect, but we are trying. Take a look at what we're building and tell us how we can make it better.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">See Our Work</a>
+            <a href="#about" class="btn btn-secondary">Our Philosophy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work (Products) Section -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-subtitle">Projects</span>
+          <h2 class="section-title">Our Work</h2>
+        </div>
+
+        <div class="project-grid">
+          
+          <!-- Sonderwave Card -->
+          <article class="project-card sonderwave-card scroll-reveal" id="sonderwave-project">
+            <!-- Dynamic cursor glow overlay -->
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="project-card-content">
+              <div class="project-brand-row">
+                <div class="app-icon-wrapper">
+                  <img src="./sw_logo_square.png" alt="Sonderwave Square Icon" class="app-icon" loading="lazy">
+                </div>
+                <div class="project-identity">
+                  <h3 class="project-name">Sonderwave</h3>
+                  <a href="https://sonderwave.app" class="project-url" target="_blank" rel="noopener noreferrer">sonderwave.app</a>
+                </div>
+                <span class="project-tag">Active App</span>
+              </div>
+
+              <h4 class="project-tagline">Social media for community and conversations.</h4>
+              
+              <div class="value-strip">
+                <span class="value-pill">No Ads</span>
+                <span class="value-pill">No Algos</span>
+                <span class="value-pill">No Tracking</span>
+              </div>
+
+              <p class="project-description">
+                Sonderwave is built to bypass the modern social feed rat-race. It puts control back in your hands, giving every voice and place its rightful time.
+              </p>
+
+              <ul class="project-features-list">
+                <li>
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Publicly chat with friends and read interesting conversations.</span>
+                </li>
+                <li>
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Follow live debates and keep in touch with friends and family.</span>
+                </li>
+                <li>
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>See what's happening locally with a place-aware chronological feed.</span>
+                </li>
+                <li>
+                  <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Share your writing on a platform where every place gets its time.</span>
+                </li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://sonderwave.app" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  Visit sonderwave.app
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                
+                <div class="app-store-badges">
+                  <!-- Custom CSS outline store badges that feel premium and integrated -->
+                  <a href="https://sonderwave.app" class="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                    <svg class="store-svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.07 2.47.3 3.64 2.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-.96.04-2.13.64-2.82 1.45-.6.7-1.13 1.84-.99 2.94.1.08.15.08.2.08.96 0 2.06-.59 2.62-1.41z"/>
+                    </svg>
+                    <span>App Store</span>
+                  </a>
+                  <a href="https://sonderwave.app" class="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                    <svg class="store-svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                      <path d="M5.25 3.018a1.5 1.5 0 0 0-2.25 1.3v15.364a1.5 1.5 0 0 0 2.25 1.3l13.256-7.682a1.5 1.5 0 0 0 0-2.6L5.25 3.018z"/>
+                    </svg>
+                    <span>Google Play</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Landscape decorative logo block -->
+            <div class="project-visual-wrapper">
+              <div class="visual-container">
+                <img src="./sw_logo.png" alt="Sonderwave Landscape Banner Logo" class="project-visual-image" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+             <!-- Skeleton Future Card -->
+             <article class="project-card skeleton-card scroll-reveal">
+               <div class="card-glow" aria-hidden="true"></div>
+               <div class="blueprint-lines" aria-hidden="true"></div>
+               
+               <div class="project-card-content">
+                 <span class="skeleton-badge">In Development</span>
+                 <h3 class="skeleton-title">Future Projects</h3>
+                 <p class="skeleton-description">
+                   Engineering is actively in progress. Andelser is an experiment in making things that are moral and useful. We're focused on engineering projects across disciplines. We believe in taking the time to design things that actually deserve to exist.
+                 </p>
+                 <div class="blueprint-tech-grid">
+                   <div class="tech-tag">CAD</div>
+                   <div class="tech-tag">Apps</div>
+                   <div class="tech-tag">Software</div>
+                   <div class="tech-tag">Prototypes</div>
+                   <div class="tech-tag">Products</div>
+                 </div>
+               </div>
+             </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Left: Philosophy Column -->
+          <div class="about-left scroll-reveal">
+            <span class="section-subtitle">Philosophy</span>
+            <h2 class="section-title">The Principles</h2>
+            
+            <div class="principles-stack">
+              <div class="principle-item">
+                <h3 class="principle-title">01 / Independent</h3>
+                <p class="principle-desc">Run by a single developer. This means we answer only to our users and our own standards, building projects on a timeline that allows for actual craft.</p>
+              </div>
+              <div class="principle-item">
+                <h3 class="principle-title">02 / Design-Led</h3>
+                <p class="principle-desc">Good design is about cohesion. It's about how parts fit together, whether that is a physical mechanical assembly or a mobile user interface.</p>
+              </div>
+              <div class="principle-item">
+                <h3 class="principle-title">03 / Utility-Driven</h3>
+                <p class="principle-desc">Focused on actual value. If a project doesn't solve a real problem or make a day-to-day experience a little better, we won't build it.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative Column -->
+          <div class="about-right scroll-reveal">
+            <div class="narrative-block">
+              <span class="about-author-label">Who We Are</span>
+              <p class="narrative-paragraph">
+                Andelser is a registered home for the projects of an independent developer and mechanical engineer. It is essentially a one-person design and development studio. We build things because we enjoy solving problems, whether that is an ambient social app or a physical mechanical project.
+              </p>
+              <p class="narrative-paragraph">
+                Rather than aiming for rapid corporate scale or relying on bloated tracking models, we focus on design simplicity and clean user utility. We believe that great software and great hardware are born from the same core disciplines: draft planning, structural integrity, and honest execution.
+              </p>
+              <p class="narrative-paragraph">
+                We don't have all the answers, but we design our projects around the simple belief that things should be useful, transparent, and built to last. Try our work, tell us what works, and help us improve.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-container scroll-reveal">
+        <div class="contact-box">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="contact-title">Let's talk about projects, ideas, or feedback.</h2>
+          <p class="contact-desc">
+            We are always open to hearing how people are using Sonderwave, or chatting about design, code, and mechanical engineering.
+          </p>
+
+          <div class="contact-interactive">
+            <div class="email-display-container">
+              <span class="email-address">contact@andelser.com</span>
+              <button class="btn-copy" id="btnCopyEmail" aria-label="Copy email address to clipboard">
+                <span class="copy-text-default">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="copy-icon"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy Email
+                </span>
+                <span class="copy-text-success" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Copied!
+                </span>
+              </button>
+            </div>
+            
+            <a href="mailto:contact@andelser.com" class="btn btn-secondary btn-mail">
+              Open Mail Client
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="copyright">&copy; 2026 Andelser LLC. All rights reserved.</p>
+        <p class="footer-subtext">Designed & Engineered independently in New Jersey, USA.</p>
+      </div>
+      <div class="footer-right">
+        <!-- SVG geometric "Branching Datum" A monogram watermark in footer -->
+        <svg class="footer-logo" width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="20" y1="6" x2="8" y2="33" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="20" y1="6" x2="27.5" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="32" y2="33" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="37" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="38" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="27.5" y1="23" x2="35" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          <line x1="12.5" y1="23" x2="27.5" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="./index.js"></script>
+</body>
+</html>
