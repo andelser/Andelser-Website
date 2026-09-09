@@ -1,0 +1,10 @@
+<svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kernel Panic popcorn mascot">
+  <rect width="108" height="108" rx="24" fill="#F4B942"/>
+  <path d="M35 62C21 61 21 46 32 43C28 30 44 24 51 35C58 21 76 29 73 42C88 43 87 60 75 63Z" fill="#FFF4C7" stroke="#5C3420" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M34 61H76L71 91Q54 96 37 91Z" fill="#E95445" stroke="#5C3420" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M43 63H49L50 92H44ZM59 63H65L64 93L58 94Z" fill="#FFF4C7"/>
+  <circle cx="45" cy="70" r="2.5" fill="#5C3420"/>
+  <circle cx="62" cy="70" r="2.5" fill="#5C3420"/>
+  <path d="M46 81L50 78L54 81L58 78L62 81" fill="none" stroke="#5C3420" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 67S66 72 66 75C66 79 72 79 72 75C72 72 70 67 70 67Z" fill="#6CC7E8" stroke="#287B9B"/>
+</svg>

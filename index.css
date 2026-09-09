@@ -40,9 +40,6 @@
   --pill-bg: hsla(0, 0%, 100%, 0.03);
   --store-badge-bg: hsla(0, 0%, 100%, 0.02);
   --store-badge-hover-bg: hsla(0, 0%, 100%, 0.05);
-  --skeleton-glow-color: hsla(0, 0%, 100%, 0.03);
-  --skeleton-border-glow-color: hsla(0, 0%, 100%, 0.08);
-  --blueprint-grid-color: hsla(0, 0%, 100%, 0.1);
   --btn-copy-hover-bg: hsla(0, 0%, 100%, 0.02);
 
   /* Fonts */
@@ -96,9 +93,6 @@
     --pill-bg: hsla(0, 0%, 0%, 0.03);
     --store-badge-bg: hsla(0, 0%, 0%, 0.01);
     --store-badge-hover-bg: hsla(0, 0%, 0%, 0.04);
-    --skeleton-glow-color: hsla(0, 0%, 0%, 0.015);
-    --skeleton-border-glow-color: hsla(0, 0%, 0%, 0.04);
-    --blueprint-grid-color: hsla(240, 10%, 10%, 0.05);
     --btn-copy-hover-bg: hsla(0, 0%, 0%, 0.02);
   }
 }
@@ -832,97 +826,155 @@ a {
   object-fit: contain;
 }
 
-/* Blueprint Skeleton Future Card */
-.skeleton-card {
-  grid-template-columns: 1fr;
-  min-height: auto;
-  background-color: transparent;
-  border: 1px dashed var(--border);
-}
-
-.skeleton-card .card-glow {
-  background: radial-gradient(
-    600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
-    var(--skeleton-glow-color),
-    transparent 45%
-  );
-}
-
-.skeleton-card::before {
-  background: radial-gradient(
-    500px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
-    var(--skeleton-border-glow-color),
-    transparent 50%
-  );
-}
-
-/* Elegant Blueprint Grid Background Pattern (Draft paper aesthetic) */
-.blueprint-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
-  background-image: 
-    linear-gradient(var(--blueprint-grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--blueprint-grid-color) 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.skeleton-card .project-card-content {
-  padding: 64px 48px;
-  align-items: center;
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.skeleton-badge {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
+/* Compact Open Source Projects */
+.open-source-panel {
+  background-color: var(--surface);
   border: 1px solid var(--border);
-  padding: 3px 12px;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
-.skeleton-title {
-  font-size: 1.75rem;
-  font-weight: 500;
-  margin-bottom: 16px;
+.open-source-panel:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 10px 40px -24px var(--card-shadow-hover);
+}
+
+.open-source-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.open-source-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.open-source-title {
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.open-source-intro {
+  max-width: 340px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.open-source-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.open-source-project {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: start;
+  gap: 18px;
+  padding: 28px 32px;
+}
+
+.open-source-project + .open-source-project {
+  border-left: 1px solid var(--border);
+}
+
+.open-source-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  object-fit: cover;
+}
+
+.open-source-copy {
+  min-width: 0;
+}
+
+.open-source-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 7px;
+}
+
+.open-source-name {
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.open-source-project-url {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: color var(--transition-fast);
+}
+
+.open-source-project-url:hover {
   color: var(--text-primary);
 }
 
-.skeleton-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 28px;
-  font-weight: 300;
+.open-source-project-url:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-.blueprint-tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  z-index: 2;
-}
-
-.tech-tag {
-  font-size: 0.8rem;
-  font-family: var(--font-sans);
-  color: var(--text-secondary);
+.open-source-type {
+  padding: 2px 8px;
   border: 1px solid var(--border);
-  padding: 4px 12px;
-  border-radius: 4px;
-  background-color: var(--surface);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.open-source-description {
+  margin-bottom: 14px;
+  font-size: 0.86rem;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.open-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.open-source-link:hover {
+  gap: 9px;
+  color: var(--accent);
+}
+
+.open-source-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.open-source-footnote {
+  padding: 12px 32px;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--text-muted);
 }
 
 /* About Grid Layout */
@@ -1168,6 +1220,15 @@ a {
   .visual-container {
     max-width: 220px;
   }
+
+  .open-source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .open-source-project + .open-source-project {
+    border-top: 1px solid var(--border);
+    border-left: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1208,6 +1269,26 @@ a {
   
   .project-card-content {
     padding: 32px 24px;
+  }
+
+  .open-source-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+  }
+
+  .open-source-intro {
+    text-align: left;
+  }
+
+  .open-source-project {
+    padding: 24px;
+  }
+
+  .open-source-footnote {
+    padding-right: 24px;
+    padding-left: 24px;
   }
   
   .project-brand-row {
@@ -1270,6 +1351,23 @@ a {
 }
 
 @media (max-width: 480px) {
+  .open-source-project {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .open-source-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+  }
+
+  .open-source-name-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .app-store-badges {
     flex-direction: column;
     width: 100%;
