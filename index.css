@@ -231,6 +231,18 @@ a {
   outline: none;
 }
 
+.btn:focus-visible,
+.store-badge:focus-visible,
+.nav-link:focus-visible,
+.mobile-nav-link:focus-visible,
+.brand:focus-visible,
+.project-url:focus-visible,
+.nav-toggle:focus-visible,
+.btn-copy:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .btn-primary {
   background-color: var(--text-primary);
   color: var(--bg-color);
