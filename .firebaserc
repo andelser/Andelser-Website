@@ -2,6 +2,17 @@
   "projects": {
     "default": "andelser"
   },
-  "targets": {},
+  "targets": {
+    "andelser": {
+      "hosting": {
+        "andelser": [
+          "andelser"
+        ],
+        "ralana": [
+          "andelser-ralana"
+        ]
+      }
+    }
+  },
   "etags": {}
 }

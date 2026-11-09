@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafaf8">
+  <meta name="description" content="How Ralana handles data during its beta.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy — Ralana">
+  <meta property="og:description" content="How Ralana handles data during its beta.">
+  <meta property="og:url" content="https://ralana.andelser.com/privacy">
+  <link rel="canonical" href="https://ralana.andelser.com/privacy">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Privacy Policy — Ralana</title>
+</head>
+<body>
+<header class="topbar wrap">
+  <a class="wordmark" href="/" aria-label="Ralana home">Ralana</a>
+  <nav class="nav" aria-label="Primary">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/support">Support</a>
+  </nav>
+</header>
+<main class="document wrap">
+  <span class="kicker">Ralana / Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective November 5, 2026</p>
+  <p>Ralana is provided by Andelser LLC ("Andelser," "we," "us," or "our") for shared experiences among friends and family. This policy explains how we handle information when you use the Ralana app, visit this website, participate in testing, or contact us. Our current external beta is intended for participants in the United States aged 13 and older. Participants aged 13–17 need a parent or guardian's permission and supervision.</p>
+
+  <h2>No account required</h2>
+  <p>You do not need a Ralana account, email registration, or password to join an experience. An optional display nickname is different from an account. We do not sell personal information or use it for targeted advertising. We do not embed advertising or cross-app tracking SDKs in the app. Testing platforms separately provide information described below.</p>
+
+  <h2>Information used for shared experiences</h2>
+  <ul>
+    <li><strong>Rooms and participants:</strong> The app generates room identifiers, invitation secrets, and a random participant identifier. The participant identifier is created for each app process, can be reused across rooms until that process restarts, and is not based on a hardware identifier. The app sends these details to our relay to establish and coordinate the session. Invitation secrets authorize joining and are excluded from the relay's public room information. Only share invitations with people you intend to invite.</li>
+    <li><strong>Optional nickname:</strong> If you enter a nickname, it is saved on your device, sent to the relay, and displayed to other people in your room. You can leave it blank and use a default player label. Choose a nickname that does not include your full name, email address, telephone number, or other private details.</li>
+    <li><strong>Interaction and progress:</strong> Touch and calibration inputs, readiness, gameplay events, and shared state are processed by the relay and sent to participating devices as needed to run the experience. Completed-episode identifiers are saved locally and can be sent to the relay when selecting a story to determine which episodes are available to the group.</li>
+    <li><strong>Screen information:</strong> Screen dimensions, pixel ratio, and relevant display-cutout or alignment geometry are used to fit graphics across devices. The app processes this information locally and sends the geometry needed for shared layouts to the relay and room participants. On supported iPhones, model information may be read locally to estimate screen geometry.</li>
+    <li><strong>Connection and operational information:</strong> Our infrastructure processes IP addresses and other network metadata to deliver connections. Relay operational logs contain timestamps, event types, room identifiers, and app-generated participant identifiers. We use these records to operate the service, investigate errors, maintain security, and prevent abuse. These logs are separate from temporary room state.</li>
+  </ul>
+
+  <h2>Device access and local information</h2>
+  <ul>
+    <li><strong>Camera:</strong> The app requests camera access when you choose to scan a room QR code. Frames are analyzed locally to read the code; Ralana does not record, save, or upload the camera feed. The decoded invitation is used to join the relay session. You can revoke camera access in your device settings.</li>
+    <li><strong>Clipboard:</strong> Choosing Paste Invite reads clipboard text to find an invitation. Choosing Copy Invite places an invitation on the clipboard. The app does not monitor clipboard contents in the background.</li>
+    <li><strong>Android NFC:</strong> While the app is in the foreground, NFC handling may suppress unintended wallet or tag interactions between adjacent phones. Ralana does not use NFC for session communication or retain or transmit tag or payment information through this feature.</li>
+    <li><strong>Preferences and progress:</strong> Optional nickname, sound and reduced-motion settings, saved screen calibration, and completed-episode identifiers are stored using platform preferences. Edit available preferences in Settings. Clearing app storage, or fully deleting the app where supported, removes local app data; device backups or later restoration may preserve or restore copies.</li>
+    <li><strong>Local diagnostics:</strong> The app maintains a limited in-memory buffer of connection and session events. Generic diagnostics exclude message payloads and invitation credentials. If you copy a report and send it to us, that copy is handled as a support record. Development builds can also write diagnostic events to device logs.</li>
+  </ul>
+
+  <h2>Media Wall photos and videos</h2>
+  <p>Media Wall is optional. When you choose a photo or video, the app makes a temporary copy for a private preview on your device. When you tap Show, the selected file is sent directly from your device to the other displays assigned to the wall over encrypted local network connections. The file may contain information embedded in it, such as when or where it was taken. Share only media you have permission to show to everyone at the wall.</p>
+  <p>Our hosted relay coordinates playback and passes along the details the displays need to connect, including local network addresses and ports, file size, a temporary certificate, and a short-lived download pass. You can manage photo and local network permissions in your device settings where your device offers those controls.</p>
+  <p>The app stages temporary copies on the host and receiving displays. During normal use, it removes its temporary copies when you cancel a preview, replace media, or leave the wall, as applicable. If the app is interrupted before cleanup, temporary copies may remain in device storage. Other participants can capture what appears on their displays.</p>
+
+  <h2>Testing, feedback, and support</h2>
+  <p>If you request test access, we receive the contact and device information you provide to arrange invitations and communicate about the test. If you contact support or send feedback, we receive your email address and the message, diagnostic report, screenshots, or other material you choose to send. Please avoid including other people's private information.</p>
+  <p>Apple TestFlight automatically provides crash and usage information to Apple and the app provider; that reporting is not an optional Ralana setting. Depending on how you enroll or submit feedback, we may also receive your name, email address, device and operating-system details, comments, and screenshots. Google Play may make testing feedback, crash information, and technical reports available to us. We use information made available to us to administer testing, respond to participants, investigate problems, and improve Ralana. Apple and Google also handle information under their own <a href="https://www.apple.com/legal/privacy/">Apple privacy notice</a> and <a href="https://policies.google.com/privacy">Google privacy notice</a>, and their testing terms.</p>
+
+  <h2>Website and service providers</h2>
+  <p>Our relay is hosted by Fly.io. This website uses Google Firebase Hosting. Visiting the website, including opening a policy page inside the app, sends the hosting infrastructure information needed to serve the request, such as your IP address, requested page, and browser or device request metadata. Email service providers handle delivery and storage of support and testing correspondence. Apple and Google provide distribution and testing services. These providers process information needed for their roles under applicable service terms and privacy or data-protection commitments. See <a href="https://fly.io/legal/privacy-policy/">Fly.io's privacy notice</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+  <p>We do not publish a room directory or offer open chat. Other participants can see the nickname and shared-session information needed for your room and may retain information they see. We may also disclose information where required by law or reasonably necessary to investigate abuse, protect safety or security, or establish or defend legal rights.</p>
+
+  <h2>Security</h2>
+  <p>External testing builds use encrypted connections between the app and our hosted relay (WSS/TLS), and this website uses HTTPS. The relay processes the session information it coordinates; these connections are not end-to-end encryption between participants. No service can guarantee absolute security. Keep invitation links private and contact us if you believe an invitation or session has been misused.</p>
+
+  <h2>Retention</h2>
+  <ul>
+    <li><strong>Room state:</strong> Shared room state is held in temporary relay memory. The default configuration makes an empty room eligible for removal after five minutes without activity, with cleanup checks about every 30 seconds. Disconnected member records normally have a two-minute reconnection period, but participants and related state can remain longer while a shared experience is active and another participant keeps the room alive. Removal from active room memory does not erase separate logs or copies held by other participants.</li>
+    <li><strong>Operational logs:</strong> Fly.io currently documents seven days of retention for application logs. Leaving a room does not immediately delete these records. Reports or log excerpts supplied to support are handled under the support-record criteria below.</li>
+    <li><strong>Local information:</strong> Preferences and episode progress remain on your device until edited or removed through the app or operating system. The local diagnostics buffer lasts for the app process and has a limited number of entries.</li>
+    <li><strong>Support and feedback:</strong> We retain correspondence and submitted material for as long as needed to respond, investigate the reported problem, and evaluate related fixes. Test-administration contact information is retained while needed to administer your participation and follow up on the test. We may retain relevant records longer when needed for security investigations, legal obligations, or resolving disputes, and delete records when those purposes no longer apply.</li>
+    <li><strong>Platform and infrastructure records:</strong> Records held by hosting, email, and testing providers are subject to their applicable retention and deletion practices. Removing a developer-held copy does not necessarily remove a provider's independently held record.</li>
+  </ul>
+
+  <h2>Your choices and deletion requests</h2>
+  <p>You can leave a room, stop testing, revoke camera permission, edit an optional nickname, and manage local app storage. Leaving a room stops your participation but does not delete already retained operational, support, or testing records. You cannot opt out of connection information necessary to run a shared session while continuing to use that session.</p>
+  <p>To ask about information we hold, request access or correction where applicable, or request deletion, email <a href="mailto:support@andelser.com">support@andelser.com</a> or <a href="mailto:contact@andelser.com">contact@andelser.com</a>. A parent or guardian may contact us about a minor's information. We may request reasonable information to verify the request and your authority, but please do not send invitation secrets or identity documents unless we specifically arrange a secure way to do so. Because participant identifiers change when the app process restarts, we may be unable to associate some technical records with you. We will explain any applicable retention, legal, or technical limits, including provider retention periods. There is no Ralana account to delete.</p>
+
+  <h2>Families and younger users</h2>
+  <p>Ralana is designed for shared moments among friends and family. The current beta is for ages 13 and older, with a parent or guardian's permission and supervision for participants aged 13–17. It is not offered to children under 13. A parent's supervision does not override a testing platform's eligibility rules. In the United States, Apple TestFlight does not permit users under 13.</p>
+  <p>Parents and guardians should review this policy and the <a href="/terms">Terms of Use</a>, help younger participants choose a non-identifying nickname, and supervise invitations and shared play. If you believe a child under 13 has provided personal information through Ralana, contact us using the details below so we can investigate and take appropriate steps to remove that information. Supporting younger children in a future release would require a separate review of privacy safeguards, consent requirements, and distribution rules.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We will update this policy and its effective date when our practices change. For material changes, we will provide an appropriate additional notice, such as in the app or through test communications, before the new practices apply. Where a change requires consent, we will obtain it before the relevant processing begins.</p>
+
+  <h2>Contact</h2>
+  <p>For privacy requests, please use the email addresses or telephone number below. The street address identifies our registered office.</p>
+  <p>
+    Andelser LLC<br>
+    Registered office: 971 US Highway 202N, Suite N, Branchburg, NJ 08876, United States<br>
+    Telephone: <a href="tel:+19083490591">908-349-0591</a><br>
+    Privacy and support: <a href="mailto:support@andelser.com">support@andelser.com</a><br>
+    General: <a href="mailto:contact@andelser.com">contact@andelser.com</a>
+  </p>
+</main>
+<footer class="footer">
+  <div class="footer-inner wrap">
+    <span>© 2026 Andelser LLC · Made to be shared.</span>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/support">Support</a>
+      <a href="https://andelser.com" rel="noopener">Andelser</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
