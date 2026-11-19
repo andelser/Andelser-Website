@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Join a room · Ralana</title>
+  <style>
+    .invite { width: min(100% - 40px, 36rem); margin: 2rem auto 4rem; }
+    .invite h1 { font-size: clamp(2.6rem, 8vw, 4.5rem); }
+    .invite button { background: var(--ink); color: white; font: inherit; font-weight: 600; border: 0; border-radius: .75rem; padding: .8rem 1.3rem; cursor: pointer; }
+    .invite input { display: block; width: 100%; font: inherit; padding: .6rem; }
+    .invite hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+    .invite h2 { font-size: 1.4rem; }
+  </style>
+</head>
+<body>
+  <header class="topbar wrap"><a class="wordmark" href="/">Ralana</a><nav class="nav"><a href="/support">Support</a></nav></header>
+  <main class="invite">
+    <h1>Join a room</h1>
+    <p id="instructions">Open Ralana, tap <strong>Connect → Scan theirs</strong>, and scan the QR on the host’s phone.</p>
+    <button type="button" id="copy" hidden>Copy room invite</button>
+    <p role="status" id="status"></p>
+    <label id="manual" hidden>Room invite<input id="invite" type="text" readonly></label>
+    <hr>
+    <h2>Installing the beta?</h2>
+    <p><strong>iPhone</strong><br>Open your Ralana tester invitation on your iPhone. Follow the link to TestFlight, then install Ralana.</p>
+    <p><strong>Android</strong><br>Open your tester opt-in link with the Google account that was invited. Join the test, then install Ralana from Google Play.</p>
+    <p>After installing, return to this page or scan the host’s QR again.</p>
+  </main>
+  <script>
+    const copy = document.querySelector('#copy');
+    const status = document.querySelector('#status');
+    const instructions = document.querySelector('#instructions');
+    const manual = document.querySelector('#manual');
+    const field = document.querySelector('#invite');
+    const scanInstructions = instructions.innerHTML;
+    function roomInvite() {
+      const fragment = location.hash.slice(1);
+      if (location.search || fragment.length > 2048 || !fragment.startsWith('/j/')) return null;
+      const url = new URL(fragment, location.origin);
+      const params = url.searchParams;
+      const id = /^[a-zA-Z0-9_-]{1,256}$/;
+      if (!/^\/j\/[a-zA-Z0-9_-]{1,256}$/.test(url.pathname) || url.hash ||
+          params.getAll('k').length !== 1 || !id.test(params.get('k')) ||
+          [...params.keys()].some(key => key !== 'k' && key !== 'r') ||
+          params.getAll('r').length > 1 ||
+          (params.has('r') && params.get('r') !== 'wss://ralana-relay.fly.dev')) return null;
+      return location.href;
+    }
+    function render() {
+      const invite = roomInvite();
+      manual.hidden = true;
+      field.value = '';
+      status.textContent = '';
+      copy.hidden = !invite;
+      if (invite) {
+        instructions.innerHTML = 'Copy the invite, then open Ralana and tap <strong>Connect → Paste invite</strong>.';
+      } else {
+        instructions.innerHTML = scanInstructions;
+        if (location.hash || location.search) status.textContent = 'This invite could not be read. Ask the host to show their current QR.';
+      }
+    }
+    copy.addEventListener('click', async () => {
+      const invite = roomInvite();
+      if (!invite) return;
+      try {
+        await navigator.clipboard.writeText(invite);
+        status.textContent = 'Room invite copied.';
+      } catch {
+        manual.hidden = false;
+        field.value = invite;
+        field.focus();
+        field.select();
+        status.textContent = 'Select and copy the room invite below.';
+      }
+    });
+    window.addEventListener('hashchange', render);
+    render();
+  </script>
+</body>
+</html>
