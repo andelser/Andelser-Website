@@ -21,7 +21,7 @@
   <header class="topbar wrap"><a class="wordmark" href="/">Ralana</a><nav class="nav"><a href="/support">Support</a></nav></header>
   <main class="invite">
     <h1>Join a room</h1>
-    <p id="instructions">Open Ralana, tap <strong>Connect → Scan theirs</strong>, and scan the QR on the host’s phone.</p>
+    <p id="instructions">On one phone, open Ralana and tap <strong>Start the group</strong>. On each joining phone, tap <strong>Scan to join</strong> in Ralana and scan the QR on any phone already in the group.</p>
     <button type="button" id="copy" hidden>Copy room invite</button>
     <p role="status" id="status"></p>
     <label id="manual" hidden>Room invite<input id="invite" type="text" readonly></label>
@@ -29,7 +29,7 @@
     <h2>Installing the beta?</h2>
     <p><strong>iPhone</strong><br>Open your Ralana tester invitation on your iPhone. Follow the link to TestFlight, then install Ralana.</p>
     <p><strong>Android</strong><br>Open your tester opt-in link with the Google account that was invited. Join the test, then install Ralana from Google Play.</p>
-    <p>After installing, return to this page or scan the host’s QR again.</p>
+    <p>After installing, return to the invite on this phone, or open Ralana and tap <strong>Scan to join</strong> to scan the group QR.</p>
   </main>
   <script>
     const copy = document.querySelector('#copy');
@@ -58,7 +58,7 @@
       status.textContent = '';
       copy.hidden = !invite;
       if (invite) {
-        instructions.innerHTML = 'Copy the invite, then open Ralana and tap <strong>Connect → Paste invite</strong>.';
+        instructions.innerHTML = 'Tap <strong>Copy room invite</strong> below. Then open Ralana on this phone and tap <strong>Paste invite</strong> on the home screen.';
       } else {
         instructions.innerHTML = scanInstructions;
         if (location.hash || location.search) status.textContent = 'This invite could not be read. Ask the host to show their current QR.';
